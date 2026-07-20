@@ -57,7 +57,7 @@ header {
   gap: 0.6rem;
 }
 
-/* ===== LOGO - LARGER (10-15% bigger) ===== */
+/* ===== LOGO ===== */
 .logo {
   display: flex;
   align-items: center;
@@ -204,7 +204,6 @@ nav a.active {
   font-style: italic;
 }
 
-/* ===== HERO DESCRIPTION - ADDED MARGIN BOTTOM FOR SPACING ===== */
 .hero-description {
   font-size: 1.2rem;
   max-width: 900px;
@@ -213,7 +212,7 @@ nav a.active {
   line-height: 1.7;
 }
 
-/* ===== FEATURE BADGES - ADDED MARGIN TOP FOR SPACING ===== */
+/* ===== FEATURE BADGES ===== */
 .badge-row {
   margin-top: 0;
   display: flex;
@@ -943,7 +942,11 @@ nav a.active {
   margin-top: 0.8rem;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* ===== TABLET RESPONSIVE ===== */
 @media (max-width: 820px) {
   .hero-headline {
     font-size: 3.5rem;
@@ -1000,10 +1003,13 @@ nav a.active {
   }
 }
 
+/* ===== MOBILE RESPONSIVE (PHONES) ===== */
 @media (max-width: 700px) {
+  /* Header */
   .header-inner {
     flex-wrap: wrap;
   }
+
   nav {
     width: 100%;
     margin-top: 0.8rem;
@@ -1026,6 +1032,20 @@ nav a.active {
   .hamburger {
     display: block;
   }
+
+  /* Hero - Mobile */
+  .hero-headline {
+    font-size: 2.2rem !important;
+  }
+  .hero-tagline {
+    font-size: 1rem !important;
+  }
+  .hero-description {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    margin: 0.5rem auto 1.5rem !important;
+    padding: 0 0.2rem;
+  }
   .badge-row {
     flex-direction: column;
     align-items: center;
@@ -1035,6 +1055,8 @@ nav a.active {
     flex-direction: column;
     align-items: center;
   }
+
+  /* Footer */
   .footer-bottom {
     flex-direction: column;
     align-items: center;
@@ -1046,12 +1068,16 @@ nav a.active {
   .footer-social a {
     margin: 0 0.6rem;
   }
+
+  /* Toast */
   .toast-message {
     font-size: 0.9rem;
     padding: 0.8rem 1.5rem;
     bottom: 20px;
     max-width: 90%;
   }
+
+  /* Grids */
   .services-grid {
     grid-template-columns: 1fr;
   }
@@ -1061,6 +1087,8 @@ nav a.active {
   .why-us-grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
+
+  /* Logo */
   .logo-image {
     height: 45px;
   }
@@ -1079,17 +1107,14 @@ nav a.active {
   .logo {
     gap: 0.5rem;
   }
-  .hero-headline {
-    font-size: 2.8rem;
-  }
-  .hero-tagline {
-    font-size: 1.2rem;
-  }
-  .hero-description {
-    margin-bottom: 2rem;
+
+  /* Hero spacer */
+  .hero-spacer {
+    height: 1.5rem;
   }
 }
 
+/* ===== DESKTOP (Show Nav) ===== */
 @media (min-width: 701px) {
   nav {
     display: block !important;
