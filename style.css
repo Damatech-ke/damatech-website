@@ -252,6 +252,98 @@ nav a.active {
   flex-wrap: wrap;
 }
 
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.2rem;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+  color: white;
+}
+
+.whatsapp-float .whatsapp-tooltip {
+  position: absolute;
+  right: 70px;
+  background: var(--royal-dark);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== WHATSAPP BUTTON (Hero Section) ===== */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #25D366;
+  color: white;
+  padding: 0.85rem 2.4rem;
+  border-radius: 60px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+  color: white;
+}
+
+/* ===== WHATSAPP CONTACT BUTTON ===== */
+.btn-whatsapp-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #25D366;
+  color: white;
+  padding: 0.7rem 1.8rem;
+  border-radius: 60px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-top: 1rem;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  color: white;
+}
+
 /* ===== BUTTONS ===== */
 .btn-primary {
   display: inline-flex;
@@ -1001,15 +1093,18 @@ nav a.active {
   .process-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+  }
 }
 
 /* ===== MOBILE RESPONSIVE (PHONES) ===== */
 @media (max-width: 700px) {
-  /* Header */
   .header-inner {
     flex-wrap: wrap;
   }
-
   nav {
     width: 100%;
     margin-top: 0.8rem;
@@ -1032,8 +1127,6 @@ nav a.active {
   .hamburger {
     display: block;
   }
-
-  /* Hero - Mobile */
   .hero-headline {
     font-size: 2.2rem !important;
   }
@@ -1055,8 +1148,6 @@ nav a.active {
     flex-direction: column;
     align-items: center;
   }
-
-  /* Footer */
   .footer-bottom {
     flex-direction: column;
     align-items: center;
@@ -1068,16 +1159,12 @@ nav a.active {
   .footer-social a {
     margin: 0 0.6rem;
   }
-
-  /* Toast */
   .toast-message {
     font-size: 0.9rem;
     padding: 0.8rem 1.5rem;
     bottom: 20px;
     max-width: 90%;
   }
-
-  /* Grids */
   .services-grid {
     grid-template-columns: 1fr;
   }
@@ -1087,8 +1174,6 @@ nav a.active {
   .why-us-grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
-
-  /* Logo */
   .logo-image {
     height: 45px;
   }
@@ -1107,14 +1192,29 @@ nav a.active {
   .logo {
     gap: 0.5rem;
   }
-
-  /* Hero spacer */
   .hero-spacer {
     height: 1.5rem;
   }
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    bottom: 20px;
+    right: 20px;
+  }
+  .whatsapp-float .whatsapp-tooltip {
+    display: none;
+  }
+  .btn-whatsapp {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  .btn-whatsapp-contact {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
 }
 
-/* ===== DESKTOP (Show Nav) ===== */
 @media (min-width: 701px) {
   nav {
     display: block !important;
